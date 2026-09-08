@@ -1,0 +1,761 @@
+/* =========================
+   Business Management
+========================= */
+
+.business-page,
+.business-form-page {
+    min-height: 100%;
+    padding: 30px;
+    background: #f5f7fb;
+}
+
+
+/* Header */
+
+.business-header,
+.business-form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.business-header h1,
+.business-form-header h1 {
+    margin: 0;
+    color: #1f2937;
+    font-size: 28px;
+}
+
+.business-header p,
+.business-form-header p {
+    margin: 6px 0 0;
+    color: #6b7280;
+}
+
+
+/* Add Button */
+
+.add-business-button {
+    border: none;
+    background: #2563eb;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.add-business-button:hover {
+    background: #1d4ed8;
+}
+
+
+/* Error */
+
+.business-error {
+    margin-bottom: 20px;
+    padding: 12px 15px;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    color: #b91c1c;
+    border-radius: 7px;
+}
+
+
+/* Table Card */
+
+.business-table-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+}
+
+.business-table-header {
+    padding: 20px 24px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.business-table-header h2 {
+    margin: 0;
+    font-size: 20px;
+    color: #1f2937;
+}
+
+.business-table-header span {
+    display: block;
+    margin-top: 5px;
+    color: #6b7280;
+    font-size: 13px;
+}
+
+
+/* Table */
+
+.business-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.business-table {
+    width: 100%;
+    min-width: 1250px;
+    border-collapse: collapse;
+}
+
+.business-table th {
+    padding: 14px 16px;
+    background: #f8fafc;
+    color: #475569;
+    text-align: left;
+    font-size: 13px;
+    font-weight: 700;
+    border-bottom: 1px solid #e5e7eb;
+    white-space: nowrap;
+}
+
+.business-table td {
+    padding: 15px 16px;
+    border-bottom: 1px solid #eef0f3;
+    color: #374151;
+    font-size: 13px;
+    vertical-align: middle;
+}
+
+.business-table tbody tr:hover {
+    background: #f8fafc;
+}
+
+
+/* Business Name */
+
+.business-name {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 180px;
+}
+
+.business-logo {
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+    background: #e0e7ff;
+    color: #3730a3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+
+/* GSTIN */
+
+.gstin {
+    font-weight: 600;
+    color: #374151;
+}
+
+
+/* Contact */
+
+.contact-info,
+.location-info,
+.bank-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.contact-info span,
+.location-info span,
+.bank-info span {
+    color: #6b7280;
+    font-size: 12px;
+}
+
+.location-info strong,
+.bank-info strong {
+    color: #374151;
+}
+
+
+/* Website */
+
+.website-link {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.website-link:hover {
+    text-decoration: underline;
+}
+
+
+/* Actions */
+
+.business-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.business-update-button,
+.business-delete-button {
+    border: none;
+    padding: 7px 11px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.business-update-button {
+    background: #eff6ff;
+    color: #1d4ed8;
+}
+
+.business-update-button:hover {
+    background: #dbeafe;
+}
+
+.business-delete-button {
+    background: #fef2f2;
+    color: #dc2626;
+}
+
+.business-delete-button:hover {
+    background: #fee2e2;
+}
+
+
+/* Empty / Loading */
+
+.business-loading,
+.empty-business {
+    text-align: center;
+    padding: 50px;
+    color: #6b7280;
+}
+
+
+/* =========================
+   Business Form
+========================= */
+
+.business-form-card {
+    max-width: 900px;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.form-section {
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.form-section:last-of-type {
+    border-bottom: none;
+}
+
+.form-section h3 {
+    margin: 0 0 20px;
+    color: #1f2937;
+    font-size: 18px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.form-group {
+    margin-bottom: 5px;
+}
+
+.form-group.full {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+    color: #374151;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 11px 13px;
+    border: 1px solid #d1d5db;
+    border-radius: 7px;
+    font-size: 14px;
+    font-family: inherit;
+    outline: none;
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+
+/* Form Buttons */
+
+.business-form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding-top: 5px;
+}
+
+.business-cancel-button,
+.business-save-button {
+    padding: 11px 20px;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.business-cancel-button {
+    background: white;
+    border: 1px solid #d1d5db;
+    color: #374151;
+}
+
+.business-cancel-button:hover {
+    background: #f9fafb;
+}
+
+.business-save-button {
+    border: none;
+    background: #2563eb;
+    color: white;
+}
+
+.business-save-button:hover {
+    background: #1d4ed8;
+}
+
+.business-save-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .business-page,
+    .business-form-page {
+        padding: 20px;
+    }
+
+    .business-header,
+    .business-form-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .add-business-button {
+        width: 100%;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-group.full {
+        grid-column: auto;
+    }
+
+    .business-form-card {
+        padding: 20px;
+    }
+
+    .business-form-actions {
+        flex-direction: column-reverse;
+    }
+
+    .business-cancel-button,
+    .business-save-button {
+        width: 100%;
+    }
+}
+/* =========================
+   Center Popup
+========================= */
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(0, 0, 0, 0.45);
+
+    z-index: 9999;
+
+    animation: popupOverlay 0.2s ease;
+}
+
+
+.popup-box {
+    width: 360px;
+    max-width: calc(100% - 40px);
+
+    background: #ffffff;
+
+    border-radius: 14px;
+
+    padding: 30px;
+
+    text-align: center;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.2);
+
+    animation: popupShow 0.25s ease;
+}
+
+
+/* Icon */
+
+.popup-icon {
+    width: 58px;
+    height: 58px;
+
+    margin: 0 auto 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+/* Success */
+
+.popup-box.success .popup-icon {
+    background: #dcfce7;
+    color: #16a34a;
+}
+
+
+/* Error */
+
+.popup-box.error .popup-icon {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+
+/* Title */
+
+.popup-box h3 {
+    margin: 0 0 8px;
+
+    color: #1f2937;
+
+    font-size: 21px;
+}
+
+
+/* Message */
+
+.popup-box p {
+    margin: 0 0 25px;
+
+    color: #6b7280;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+
+/* Button */
+
+.popup-button {
+    min-width: 100px;
+
+    padding: 10px 24px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.popup-button:hover {
+    background: #1d4ed8;
+}
+
+
+/* Animation */
+
+@keyframes popupShow {
+
+    from {
+        opacity: 0;
+        transform: scale(0.85);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+@keyframes popupOverlay {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+/* =================================
+   Business Success / Error Popup
+================================= */
+
+.popup-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: rgba(0, 0, 0, 0.45);
+
+    z-index: 9999;
+
+    animation: popupOverlayShow 0.2s ease;
+}
+
+
+.popup-box {
+    width: 360px;
+
+    max-width: calc(100% - 40px);
+
+    background: #ffffff;
+
+    border-radius: 14px;
+
+    padding: 30px;
+
+    text-align: center;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.25);
+
+    animation: popupShow 0.25s ease;
+}
+
+
+/* Icon */
+
+.popup-icon {
+    width: 60px;
+
+    height: 60px;
+
+    margin: 0 auto 16px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    font-size: 30px;
+
+    font-weight: 700;
+}
+
+
+/* Success */
+
+.popup-box.success .popup-icon {
+    background: #dcfce7;
+
+    color: #16a34a;
+}
+
+
+/* Error */
+
+.popup-box.error .popup-icon {
+    background: #fee2e2;
+
+    color: #dc2626;
+}
+
+
+/* Title */
+
+.popup-box h3 {
+    margin: 0 0 8px;
+
+    color: #1f2937;
+
+    font-size: 21px;
+}
+
+
+/* Message */
+
+.popup-box p {
+    margin: 0 0 25px;
+
+    color: #6b7280;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+
+/* OK Button */
+
+.popup-button {
+    min-width: 100px;
+
+    padding: 10px 25px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.popup-button:hover {
+    background: #1d4ed8;
+
+    transform: translateY(-1px);
+}
+
+
+/* Overlay Animation */
+
+@keyframes popupOverlayShow {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+
+/* Popup Animation */
+
+@keyframes popupShow {
+
+    from {
+        opacity: 0;
+
+        transform: scale(0.85);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: scale(1);
+    }
+
+}
+
+/* =========================================
+   BUSINESS LOGO
+========================================= */
+
+.form-group input[type="file"] {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 10px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 7px;
+
+    background: #f9fafb;
+
+    font-size: 13px;
+
+    cursor: pointer;
+}
+
+.form-group input[type="file"]:hover {
+    border-color: #2563eb;
+}
+
+.file-help {
+    display: block;
+
+    margin-top: 6px;
+
+    color: #9ca3af;
+
+    font-size: 12px;
+}

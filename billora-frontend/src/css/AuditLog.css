@@ -1,0 +1,801 @@
+/* =========================================
+   GST REPORTS / AUDIT LOGS
+========================================= */
+
+.audit-page {
+    padding: 30px;
+    min-height: 100%;
+    background: #f5f7fb;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.audit-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.audit-header h1 {
+    margin: 0;
+    font-size: 28px;
+    color: #1f2937;
+}
+
+.audit-header p {
+    margin: 6px 0 0;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+
+/* =========================================
+   REFRESH BUTTON
+========================================= */
+
+.audit-refresh-button {
+    border: none;
+    background: #2563eb;
+    color: white;
+
+    padding: 12px 20px;
+
+    border-radius: 7px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.audit-refresh-button:hover {
+    background: #1d4ed8;
+}
+
+.audit-refresh-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+
+/* =========================================
+   AUDIT TABLE CARD
+========================================= */
+
+.audit-card {
+    background: white;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 2px 10px rgba(0, 0, 0, 0.06);
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   CARD HEADER
+========================================= */
+
+.audit-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 24px;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.audit-card-header h2 {
+    margin: 0;
+
+    color: #1f2937;
+
+    font-size: 20px;
+}
+
+.audit-card-header span {
+    display: block;
+
+    margin-top: 5px;
+
+    color: #6b7280;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   RECORD COUNT
+========================================= */
+
+.audit-count {
+    background: #eff6ff;
+
+    color: #2563eb;
+
+    padding: 7px 12px;
+
+    border-radius: 20px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   TABLE WRAPPER
+========================================= */
+
+.audit-table-container {
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+
+/* =========================================
+   TABLE
+========================================= */
+
+.audit-table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 900px;
+}
+
+
+/* =========================================
+   TABLE HEADER
+========================================= */
+
+.audit-table th {
+    background: #f8fafc;
+
+    color: #475569;
+
+    text-align: left;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    padding: 14px 16px;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   TABLE DATA
+========================================= */
+
+.audit-table td {
+    padding: 15px 16px;
+
+    border-bottom: 1px solid #eef0f3;
+
+    color: #374151;
+
+    font-size: 14px;
+
+    white-space: nowrap;
+}
+
+.audit-table tbody tr:hover {
+    background: #f8fafc;
+}
+
+.audit-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* =========================================
+   ID
+========================================= */
+
+.audit-id {
+    font-size: 13px;
+
+    font-weight: 600;
+
+    color: #6b7280;
+}
+
+
+/* =========================================
+   ACTION BADGE
+========================================= */
+
+.action-badge {
+    display: inline-block;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+
+/* CREATE */
+
+.action-create {
+    background: #dcfce7;
+
+    color: #166534;
+}
+
+
+/* UPDATE */
+
+.action-update {
+    background: #e0f2fe;
+
+    color: #075985;
+}
+
+
+/* DELETE */
+
+.action-delete {
+    background: #fee2e2;
+
+    color: #991b1b;
+}
+
+
+/* LOGIN / ACTIVE */
+
+.action-login {
+    background: #fef3c7;
+
+    color: #92400e;
+}
+
+
+/* DEFAULT */
+
+.action-default {
+    background: #f3f4f6;
+
+    color: #374151;
+}
+
+
+/* =========================================
+   USER
+========================================= */
+
+.user-cell {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.user-avatar {
+    width: 34px;
+    height: 34px;
+
+    border-radius: 50%;
+
+    background: #e0e7ff;
+
+    color: #3730a3;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-weight: 700;
+
+    font-size: 13px;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================
+   DATE
+========================================= */
+
+.audit-date {
+    color: #6b7280;
+
+    font-size: 13px;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   DETAILS
+========================================= */
+
+.audit-details {
+    color: #374151;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    white-space: normal;
+
+    min-width: 250px;
+
+    display: block;
+}
+
+
+/* =========================================
+   ERROR
+========================================= */
+
+.audit-error {
+    background: #fef2f2;
+
+    color: #b91c1c;
+
+    border: 1px solid #fecaca;
+
+    padding: 12px 15px;
+
+    border-radius: 7px;
+
+    margin: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   LOADING
+========================================= */
+
+.audit-loading {
+    text-align: center;
+
+    padding: 50px;
+
+    color: #6b7280;
+}
+
+.audit-loading p {
+    margin-top: 14px;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   LOADING SPINNER
+========================================= */
+
+.audit-spinner {
+    width: 34px;
+    height: 34px;
+
+    margin: 0 auto;
+
+    border: 3px solid #e5e7eb;
+
+    border-top-color: #2563eb;
+
+    border-radius: 50%;
+
+    animation:
+        audit-spin 0.8s linear infinite;
+}
+
+@keyframes audit-spin {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* =========================================
+   EMPTY
+========================================= */
+
+.audit-empty {
+    text-align: center;
+
+    padding: 50px;
+
+    color: #6b7280;
+}
+
+.audit-empty-icon {
+    width: 50px;
+    height: 50px;
+
+    margin: 0 auto 15px;
+
+    border-radius: 50%;
+
+    background: #dcfce7;
+
+    color: #16a34a;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 22px;
+
+    font-weight: 700;
+}
+
+.audit-empty h3 {
+    margin: 0 0 7px;
+
+    color: #374151;
+
+    font-size: 17px;
+}
+
+.audit-empty p {
+    margin: 0;
+
+    color: #6b7280;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   PAGINATION
+========================================= */
+
+.audit-pagination {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 18px 24px;
+
+    border-top: 1px solid #e5e7eb;
+}
+
+.pagination-info {
+    color: #6b7280;
+
+    font-size: 13px;
+}
+
+.pagination-buttons {
+    display: flex;
+
+    gap: 8px;
+}
+
+.pagination-buttons button {
+    padding: 8px 14px;
+
+    border: 1px solid #d1d5db;
+
+    background: white;
+
+    color: #374151;
+
+    border-radius: 6px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.pagination-buttons button:hover:not(:disabled) {
+    background: #f9fafb;
+
+    border-color: #9ca3af;
+}
+
+.pagination-buttons button:disabled {
+    opacity: 0.45;
+
+    cursor: not-allowed;
+}
+
+
+/* =========================================
+   SUCCESS / ERROR POPUP
+   Same style as Users Management
+========================================= */
+
+.popup-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: rgba(0, 0, 0, 0.45);
+
+    z-index: 9999;
+
+    animation:
+        popupOverlayShow 0.2s ease;
+}
+
+
+.popup-box {
+    width: 360px;
+
+    max-width: calc(100% - 40px);
+
+    background: #ffffff;
+
+    border-radius: 14px;
+
+    padding: 30px;
+
+    text-align: center;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.25);
+
+    animation:
+        popupShow 0.25s ease;
+}
+
+
+/* =========================================
+   POPUP ICON
+========================================= */
+
+.popup-icon {
+    width: 60px;
+    height: 60px;
+
+    margin: 0 auto 16px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    font-size: 30px;
+
+    font-weight: 700;
+}
+
+
+/* Success */
+
+.popup-box.success .popup-icon {
+    background: #dcfce7;
+
+    color: #16a34a;
+}
+
+
+/* Error */
+
+.popup-box.error .popup-icon {
+    background: #fee2e2;
+
+    color: #dc2626;
+}
+
+
+/* =========================================
+   POPUP TITLE
+========================================= */
+
+.popup-box h3 {
+    margin: 0 0 8px;
+
+    color: #1f2937;
+
+    font-size: 21px;
+}
+
+
+/* =========================================
+   POPUP MESSAGE
+========================================= */
+
+.popup-box p {
+    margin: 0 0 25px;
+
+    color: #6b7280;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   POPUP BUTTON
+========================================= */
+
+.popup-button {
+    min-width: 100px;
+
+    padding: 10px 25px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.popup-button:hover {
+    background: #1d4ed8;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================
+   POPUP ANIMATIONS
+========================================= */
+
+@keyframes popupOverlayShow {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+@keyframes popupShow {
+
+    from {
+        opacity: 0;
+
+        transform: scale(0.85);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: scale(1);
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .audit-page {
+        padding: 20px;
+    }
+
+
+    .audit-header {
+        align-items: flex-start;
+
+        gap: 15px;
+
+        flex-direction: column;
+    }
+
+
+    .audit-refresh-button {
+        width: 100%;
+    }
+
+
+    .audit-card-header {
+        align-items: flex-start;
+
+        gap: 12px;
+
+        flex-direction: column;
+    }
+
+
+    .audit-pagination {
+        align-items: flex-start;
+
+        gap: 15px;
+
+        flex-direction: column;
+    }
+
+
+    .pagination-buttons {
+        width: 100%;
+    }
+
+
+    .pagination-buttons button {
+        flex: 1;
+    }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 500px) {
+
+    .audit-page {
+        padding: 15px;
+    }
+
+
+    .audit-header h1 {
+        font-size: 24px;
+    }
+
+
+    .audit-card-header {
+        padding: 18px;
+    }
+
+
+    .audit-table th,
+    .audit-table td {
+        padding: 12px;
+    }
+}

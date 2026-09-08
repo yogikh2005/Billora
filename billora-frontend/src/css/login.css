@@ -1,0 +1,583 @@
+/* =========================================
+   LOGIN PAGE
+========================================= */
+
+.login-page {
+
+    min-height: 100vh;
+
+    background: #f5f7fb;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 80px;
+
+    padding: 40px;
+
+    box-sizing: border-box;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================================
+   LEFT BRANDING
+========================================= */
+
+.login-brand {
+
+    width: 520px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+}
+
+
+.billora-logo {
+
+    width: 100%;
+
+    max-width: 520px;
+
+    height: auto;
+
+    object-fit: contain;
+
+    display: block;
+}
+
+
+.brand-text {
+
+    margin-top: -25px;
+}
+
+
+.brand-text h2 {
+
+    margin: 0;
+
+    color: #172554;
+
+    font-size: 22px;
+
+    font-weight: 700;
+}
+
+
+.brand-text p {
+
+    margin-top: 8px;
+
+    color: #64748b;
+
+    font-size: 14px;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* =========================================
+   LOGIN CARD
+========================================= */
+
+.login-container {
+
+    width: 400px;
+
+    background: #ffffff;
+
+    padding: 35px;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 10px 35px rgba(15, 23, 42, 0.08);
+
+    border: 1px solid #e5e7eb;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   LOGIN TITLE
+========================================= */
+
+.login-title {
+
+    text-align: left;
+
+    margin-bottom: 28px;
+}
+
+
+.login-title h1 {
+
+    margin: 0;
+
+    color: #1f2937;
+
+    font-size: 27px;
+
+    font-weight: 700;
+}
+
+
+.login-title p {
+
+    margin: 7px 0 0;
+
+    color: #6b7280;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   ERROR
+========================================= */
+
+.login-error {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    margin-bottom: 20px;
+
+    padding: 11px 13px;
+
+    background: #fef2f2;
+
+    border: 1px solid #fecaca;
+
+    border-radius: 7px;
+
+    color: #b91c1c;
+
+    font-size: 13px;
+
+    line-height: 1.4;
+}
+
+
+.login-error span {
+
+    width: 20px;
+
+    height: 20px;
+
+    border-radius: 50%;
+
+    background: #dc2626;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.login-form {
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.form-group {
+
+    margin-bottom: 20px;
+}
+
+
+.form-group label {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #374151;
+}
+
+
+/* =========================================
+   INPUT
+========================================= */
+
+.login-form input {
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 12px 13px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 7px;
+
+    font-size: 14px;
+
+    color: #374151;
+
+    background: white;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s,
+        box-shadow 0.2s;
+}
+
+
+.login-form input::placeholder {
+
+    color: #9ca3af;
+}
+
+
+.login-form input:focus {
+
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+
+/* =========================================
+   PASSWORD
+========================================= */
+
+.password-input-wrapper {
+
+    position: relative;
+
+    width: 100%;
+}
+
+
+.password-input-wrapper input {
+
+    padding-right: 65px;
+}
+
+
+.show-password-button {
+
+    position: absolute;
+
+    right: 10px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    border: none;
+
+    background: transparent;
+
+    color: #2563eb;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    padding: 5px;
+}
+
+
+.show-password-button:hover {
+
+    color: #1d4ed8;
+}
+
+
+/* =========================================
+   LOGIN OPTIONS
+========================================= */
+
+.login-options {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-top: -3px;
+
+    margin-bottom: 22px;
+}
+
+
+.remember-me {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #6b7280;
+
+    font-size: 13px;
+
+    cursor: pointer;
+}
+
+
+.remember-me input {
+
+    width: 16px;
+
+    height: 16px;
+
+    cursor: pointer;
+
+    accent-color: #2563eb;
+}
+
+
+/* =========================================
+   LOGIN BUTTON
+========================================= */
+
+.login-button {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s,
+        transform 0.1s;
+}
+
+
+.login-button:hover:not(:disabled) {
+
+    background: #1d4ed8;
+
+    transform: translateY(-1px);
+}
+
+
+.login-button:active:not(:disabled) {
+
+    transform: translateY(0);
+}
+
+
+.login-button:disabled {
+
+    opacity: 0.65;
+
+    cursor: not-allowed;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.login-footer {
+
+    margin-top: 25px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #e5e7eb;
+
+    text-align: center;
+}
+
+
+.login-footer p {
+
+    margin: 0 0 6px;
+
+    color: #9ca3af;
+
+    font-size: 11px;
+}
+
+
+.login-footer span {
+
+    color: #c0c5ce;
+
+    font-size: 11px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .login-page {
+
+        gap: 40px;
+
+        padding: 30px;
+    }
+
+
+    .login-brand {
+
+        width: 430px;
+    }
+
+
+    .login-container {
+
+        width: 380px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .login-page {
+
+        flex-direction: column;
+
+        gap: 10px;
+
+        padding: 25px 20px;
+    }
+
+
+    .login-brand {
+
+        width: 100%;
+
+        max-width: 420px;
+    }
+
+
+    .billora-logo {
+
+        max-width: 350px;
+    }
+
+
+    .brand-text {
+
+        margin-top: -15px;
+    }
+
+
+    .brand-text h2 {
+
+        font-size: 18px;
+    }
+
+
+    .brand-text p {
+
+        font-size: 12px;
+    }
+
+
+    .login-container {
+
+        width: 100%;
+
+        max-width: 400px;
+
+        padding: 28px;
+    }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+    .login-page {
+
+        padding: 20px 15px;
+
+        gap: 5px;
+    }
+
+
+    .billora-logo {
+
+        max-width: 300px;
+    }
+
+
+    .login-container {
+
+        width: 100%;
+
+        padding: 25px 20px;
+
+        border-radius: 12px;
+    }
+
+
+    .login-title h1 {
+
+        font-size: 24px;
+    }
+}
