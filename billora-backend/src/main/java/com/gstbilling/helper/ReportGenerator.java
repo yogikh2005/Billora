@@ -1,5 +1,6 @@
 package com.gstbilling.helper;
-
+import org.springframework.core.io.ClassPathResource;
+import java.io.InputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
@@ -28,18 +29,16 @@ public class ReportGenerator {
     // LOAD UNICODE FONT
     // =====================================================
 
-    private PDType0Font loadUnicodeFont(PDDocument document)
-            throws IOException {
+   private PDType0Font loadUnicodeFont(PDDocument document)
+        throws IOException {
 
-        File fontFile = new File(
-                "src/main/resources/fonts/NotoSans-Regular.ttf"
-        );
+    ClassPathResource fontResource =
+            new ClassPathResource("fonts/NotoSans-Regular.ttf");
 
-        return PDType0Font.load(
-                document,
-                fontFile
-        );
+    try (InputStream inputStream = fontResource.getInputStream()) {
+        return PDType0Font.load(document, inputStream);
     }
+}
 
 
     // =====================================================
