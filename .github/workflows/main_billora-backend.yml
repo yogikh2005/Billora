@@ -1,8 +1,3 @@
-# Docs for the Azure Web Apps Deploy action:
-# https://github.com/Azure/webapps-deploy
-# More GitHub Actions for Azure:
-# https://github.com/Azure/actions
-
 name: Build and deploy JAR app to Azure Web App - billora-backend
 
 on:
@@ -14,7 +9,7 @@ on:
 jobs:
 
   # =========================
-  # BUILD JOB
+  # BUILD
   # =========================
   build:
     runs-on: ubuntu-latest
@@ -24,11 +19,9 @@ jobs:
 
     steps:
 
-      # Checkout repository
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # Setup Java 17
       - name: Set up Java 17
         uses: actions/setup-java@v4
         with:
@@ -36,21 +29,29 @@ jobs:
           distribution: 'microsoft'
           cache: maven
 
-      # Build Spring Boot backend
       - name: Build with Maven
         working-directory: ./billora-backend
-        run: mvn clean install -DskipTests
+        run: mvn clean package -DskipTests
 
-      # Upload generated JAR
-      - name: Upload artifact for deployment job
+      # Rename the generated JAR to a fixed name
+      - name: Prepare JAR
+        working-directory: ./billora-backend
+        run: |
+          JAR_FILE=$(find target -maxdepth 1 -type f -name "*.jar" ! -name "*-plain.jar" | head -n 1)
+          echo "Found JAR: $JAR_FILE"
+          cp "$JAR_FILE" billora-backend.jar
+          ls -lh billora-backend.jar
+
+      # Upload fixed JAR
+      - name: Upload JAR artifact
         uses: actions/upload-artifact@v4
         with:
           name: java-app
-          path: './billora-backend/target/*.jar'
+          path: ./billora-backend/billora-backend.jar
 
 
   # =========================
-  # DEPLOY JOB
+  # DEPLOY
   # =========================
   deploy:
     runs-on: ubuntu-latest
@@ -62,14 +63,18 @@ jobs:
 
     steps:
 
-      # Download JAR
-      - name: Download artifact from build job
+      - name: Download JAR artifact
         uses: actions/download-artifact@v4
         with:
           name: java-app
           path: ./artifact
 
-      # Login to Azure
+      # Verify downloaded file
+      - name: Verify artifact
+        run: |
+          echo "Downloaded files:"
+          ls -lah ./artifact
+
       - name: Login to Azure
         uses: azure/login@v2
         with:
@@ -77,11 +82,10 @@ jobs:
           tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_BE859B005A654E87AD5BD60B411F08A0 }}
           subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_3332E71036D14FF78198EB16F8CFAFD5 }}
 
-      # Deploy JAR to Azure
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
         with:
           app-name: 'billora-backend'
           slot-name: 'Production'
-          package: './artifact/*.jar'
+          package: './artifact/billora-backend.jar'
